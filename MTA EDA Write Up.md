@@ -10,4 +10,31 @@ This project focused around the potential for increased rush hour ridership as N
 There were 2 data sets used in the project. The first and primary data set was the [MTA turnstile data](http://web.mta.info/developers/turnstile.html). The second data set was for [MTA Station Locations (long/lat)](http://web.mta.info/developers/developer-data-terms.html#data). The MTA data contained 14 weeks of entry asnd exit data by unique turnstile for a 4 hour window. This 4 hour window was used to isolate rush hour periods for a given station. The entries and exits values are cumulative (lifetime, or since last reset of count), requiring manipulation to retrieve the actual number of entries/exits in a given window. The station location data provides station name with longitude and latitude for a given station, as well as other data not relevant to the analysis at hand. This was used to plot the stations in tableau.
 
 ## Methods (algorithms)
+ **Data Cleaning**
+
+   1. Duplicate records (same turnstile [as defined by C/A, Unit, Station, and SCP] having multiple records for a given day and time) were removed.
+   2. Turnstiles with negative entries/exits due to reversed counting were changed to positive value.
+   3. Turnstiles with clearly incorrect data (see below, missing multiple 4 hour windows) had extreme outliers caused by incorrect data removed.
+    ![image](https://user-images.githubusercontent.com/75561764/116607008-54961b00-a8e6-11eb-9090-168c96b75e67.png)
+  
+ **Data Formatting**
+ 
+   1. Created columns to represent the week number for a given record as well as day of the week
+   2. Filtered out records that occurred on the weekend or outside of typical rush hour windows
+
+
+## Tools
+  * sqlite, dbbrowser, and SQLAlchemy were used to create a DB of MTA data and query the database. The main query consisted of the following:
+    
+    * CTE with a row_number partition to determine duplicates
+    * WHERE was used to filter out duplicates based on above process
+    * LAG with a partition to append prior time window to the current time window by unique turnstile
+    * CASE WHEN... to create rush hour flags
+
+  * Exploratory analysis was conducted in pandas
+  * Visualization was conducted in Seaborn as well as mapping in Tableau
+
+## Communication
+
+This will be done via slides and visuals.
 
