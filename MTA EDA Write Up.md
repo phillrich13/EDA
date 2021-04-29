@@ -21,6 +21,13 @@ There were 2 data sets used in the project. The first and primary data set was t
  
    1. Created columns to represent the week number for a given record as well as day of the week
    2. Filtered out records that occurred on the weekend or outside of typical rush hour windows
+   3. Aggregated by station and week to generate average traffic per week as well as change in traffic per week
+   4. Ranked both total station traffic as well as change in station traffic to create deciles
+
+ **Data Visualization**
+   1. Visualized the total traffic of the top and bottom 5 stations (based on their aggregate rank) in a line chart over the 14 weeks
+   2. Visualized the change in total traffic of the top and bottom 5 stations (based on their aggregate rank) in a line chart over the 14 weeks
+   3. Plotted the top and bottom decile of stations on a map
 
 
 ## Tools
