@@ -25,9 +25,11 @@ There were 2 data sets used in the project. The first and primary data set was t
    4. Ranked both total station traffic as well as change in station traffic to create deciles
 
  **Data Visualization**
-   1. Visualized the total traffic of the top and bottom 5 stations (based on their aggregate rank) in a line chart over the 14 weeks
-   2. Visualized the change in total traffic of the top and bottom 5 stations (based on their aggregate rank) in a line chart over the 14 weeks
-   3. Plotted the top and bottom decile of stations on a map
+   1. Visualized the total traffic of the [top](https://user-images.githubusercontent.com/75561764/116935264-f6857280-ac1a-11eb-9cad-bdafc3941959.png) and [bottom](https://user-images.githubusercontent.com/75561764/116935494-48c69380-ac1b-11eb-9fd4-633b54c1de68.png)
+ 5 stations (based on their aggregate rank) in a line chart over the 14 weeks
+   3. Visualized the change in total traffic of the top and bottom 5 stations (based on their aggregate rank) in a line chart over the 14 weeks
+   4. Plotted the top and bottom decile of stations on a [map](https://user-images.githubusercontent.com/75561764/116935214-e4a3cf80-ac1a-11eb-8407-041efe4c17ec.png)
+
 
 
 ## Tools
@@ -43,4 +45,4 @@ There were 2 data sets used in the project. The first and primary data set was t
 
 ## Communication
 
-This will be done via slides and visuals.
+This will be done via [slides](https://github.com/phillrich13/EDA/blob/main/MTA%20Future%20Staffing%20Decisions%20Slides.pdf) and visuals.
